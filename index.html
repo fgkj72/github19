@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV导航页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 页面容器铺满屏幕 */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 背景图片容器 - 自适应屏幕 */
+        .bg-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* 背景图片自适应 */
+        .bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持图片比例，铺满容器 */
+        }
+
+        /* 按钮容器 - 顶部20%位置，竖向排列，宽度100% */
+        .btn-group {
+            position: absolute;
+            top: 5%;
+            left: 0; 
+            width: 100%; 
+            display: flex;
+            flex-direction: column; /* 竖向排列 */
+            padding: 0 10px; /* 左右留边距，可删除 */
+        }
+
+        /* 炫酷按钮样式 - 字体加大 */
+        .custom-btn {
+            padding: 15px 0; /* 上下内边距，左右无内边距 */
+            border: none; /* 移除边框 */
+            background: transparent; /* 背景透明 */
+            font-size: 28px; /* 字体加大（原20px，提升至28px） */
+            font-weight: 800; /* 字体加粗 */
+            cursor: pointer;
+            text-decoration: none; /* 去除链接下划线 */
+            text-align: center;
+            transition: all 0.3s ease;
+            width: 100%; /* 按钮宽度铺满屏幕 */
+        }
+
+        /* 分隔横线样式 */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5); /* 半透明白色横线 */
+            border: none;
+            margin: 0; /* 横线与按钮无间距，贴紧 */
+        }
+
+        /* 每个按钮随机彩色文字 + 动态渐变（无发光） */
+        .btn-1 {
+            background: linear-gradient(90deg, #ff0000, #ff9900, #33ff00, #0099ff, #9900ff);
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: colorChange1 4s linear infinite;
+        }
+        .btn-2 {
+            background: linear-gradient(90deg, #00ffff, #ff00ff, #ffff00, #00ff99, #ff6600);
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: colorChange2 5s linear infinite;
+        }
+        .btn-3 {
+            background: linear-gradient(90deg, #ff3366, #33ccff, #ccff33, #ff33cc, #3333ff);
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: colorChange3 6s linear infinite;
+        }
+
+        /* 不同按钮不同速度的颜色动画 */
+        @keyframes colorChange1 {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        @keyframes colorChange2 {
+            0% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes colorChange3 {
+            0% { background-position: 50% 50%; }
+            100% { background-position: 150% 50%; }
+        }
+
+        /* 按钮悬浮效果（无发光，仅轻微透白） */
+        .custom-btn:hover {
+            transform: scale(1.02); /* 轻微放大 */
+            background: rgba(255,255,255,0.1); /* 悬浮轻微透白 */
+        }
+
+        /* 响应式调整 - 小屏幕适配（同步加大字体） */
+        @media (max-width: 768px) {
+            .custom-btn {
+                font-size: 28px; /* 平板端字体（原18px） */
+                padding: 12px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .custom-btn {
+                font-size: 28px; /* 手机端字体（原16px） */
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片容器 -->
+    <div class="bg-container">
+        <!-- 替换为你的背景图片URL -->
+        <img src="img/1.jpg" alt="背景图片" class="bg-img">
+    </div>
+
+    <!-- 按钮组 - 顶部20%位置，宽度铺满屏幕，按钮间添加横线分隔 -->
+    <div class="btn-group">
+        <a href="tzbvxz.html" class="custom-btn btn-1">安卓下载</a>
+        <hr class="divider"> <!-- 安卓和苹果之间的横线 -->
+        <a href="https://bv02.cc/bvpg1xz.html" class="custom-btn btn-2">苹果下载</a>
+        <hr class="divider"> <!-- 苹果和网页之间的横线 -->
+        <a href="https://xsgame-haha.com/" class="custom-btn btn-3">网页登录</a>
+        <hr class="divider"> <!-- 苹果和网页之间的横线 -->
+        <a href="https://tawk.to/chat/693a8d48fc8f39198374ad62/1jc6bfp8k" class="custom-btn btn-3">在线客服</a>
+    </div>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/693a8d48fc8f39198374ad62/1jc6bfp8k';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+</html>
